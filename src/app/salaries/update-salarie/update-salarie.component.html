@@ -1,0 +1,110 @@
+<div class="form-container">
+    <form  [formGroup]="salarieFormGroup" (ngSubmit)="onSubmit()">
+        
+        <mat-form-field class="fill">
+            <mat-label>Nom</mat-label>
+    <input matInput [(ngModel)]="salarie.nom" name="nom"   formControlName="nom"  required>
+        </mat-form-field>
+    
+        <mat-form-field class="fill">
+            <mat-label>Prénom</mat-label>
+            <input matInput [(ngModel)]="salarie.prenom" name="prenom"   formControlName="prenom"  required>
+        </mat-form-field>
+    
+    
+        <mat-form-field style="width: 50%;" appearance="fill" required>
+            <mat-label>Genre</mat-label>
+            <mat-select formControlName="genre" name="genre"  [(ngModel)]="salarie.genre"  >
+                <mat-option  *ngFor="let option of genreOptions" [value]="option.value" >{{option.label}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        
+        <mat-form-field style="width: 50%;" appearance="fill" required>
+            <mat-label>Type De Contrat</mat-label>
+            <mat-select formControlName="type_de_contrat" name="type_de_contrat" [(ngModel)]="salarie.type_de_contrat">
+                <mat-option *ngFor="let option of typeContratOptions" [value]="option.value">{{option.label}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    
+        <mat-form-field style="width: 50%;" appearance="fill" required>
+            <mat-label>Segment</mat-label>
+            <mat-select formControlName="segment" name="segment" [(ngModel)]="salarie.segment">
+                <mat-option *ngFor="let option of segmentOptions" [value]="option.value">{{option.label}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field style="width: 50%;" appearance="fill" required>
+            <mat-label>Business Unit</mat-label>
+            <mat-select formControlName="bu"  name="bu" [(ngModel)]="salarie.bu" >
+                <mat-option *ngFor="let option of buOptions" [value]="option.value">{{option.label}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <br>
+    
+    
+        <mat-form-field style="width: 50%;" appearance="fill" required>
+            <mat-label>Site</mat-label>
+            <mat-select formControlName="site" name="site" [(ngModel)]="salarie.site" >
+                <mat-option *ngFor="let option of siteOptions" [value]="option.value">{{option.label}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    
+    
+        <mat-form-field style="width: 50%;" appearance="fill" required>
+            <mat-label>Code Site</mat-label>
+            <mat-select formControlName="code_site" name="code_site" [(ngModel)]="salarie.code_site" >
+                <mat-option *ngFor="let option of codeSiteOptions" [value]="option.value">{{option.label}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+    
+        <mat-form-field class="fill">
+            <mat-label>Departement</mat-label>
+            <input matInput [(ngModel)]="salarie.departement"  formControlName="departement"  required>
+        </mat-form-field>
+    
+        <mat-form-field class="fill">
+            <mat-label>Local Job Title</mat-label>
+            <input matInput  [(ngModel)]="salarie.local_job_title"  formControlName="local_job_title"  required>
+        </mat-form-field>
+    
+        <mat-form-field class="fill">
+            <mat-label>Position</mat-label>
+            <input matInput [(ngModel)]="salarie.position"  formControlName="position"  required>
+        </mat-form-field>
+    
+        <mat-form-field class="fill">
+            <mat-label>Supervisor</mat-label>
+            <input matInput [(ngModel)]="salarie.supervisor"  formControlName="supervisor"  required>
+        </mat-form-field>
+    
+
+        
+        <mat-form-field style="width: 50%;" appearance="fill" required>
+            <mat-label>Salarie Status</mat-label>
+            <mat-select formControlName="status" name="status" [(ngModel)]="salarie.status" >
+                <mat-option *ngFor="let option of salarieStatusOptions" [value]="option.value">{{option.label}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field style="width: 50%;" appearance="fill" required>
+            <mat-label>Salarie Direct</mat-label>
+            <mat-select formControlName="direct" name="direct" [(ngModel)]="salarie.direct" >
+                <mat-option *ngFor="let option of directOptions" [value]="option.value">{{option.label}}</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <!-- <mat-radio-group [(ngModel)]="salarie.direct" name="direct" formControlName="direct" aria-label="direct">
+            <mat-radio-button value="true">Direct</mat-radio-button>
+            <mat-radio-button value="false">Non Direct</mat-radio-button>
+        </mat-radio-group> -->
+        <!-- <mat-form-field style="width: 50%;" appearance="fill" required>
+            <mat-label>Direct</mat-label>
+            <mat-select formControlName="direct" name="direct"  [(ngModel)]="salarie.direct"  >
+                <mat-option   *ngFor="let option of directOptions" [value]="option.value" >{{option.label}}</mat-option>
+            </mat-select>
+        </mat-form-field> -->
+        <br>
+        <button mat-raised-button color="primary">Modifier</button>
+    
+      
+      </form>
+    
+    </div>

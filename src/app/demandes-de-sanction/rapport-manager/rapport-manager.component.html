@@ -1,0 +1,28 @@
+<div class="form-container ">
+<form  [formGroup]="rapportManagerFormGroup" (ngSubmit)="onSubmit()">
+    
+    <mat-form-field class="fill">
+        <mat-label>demandeId</mat-label>
+        <input [(ngModel)]="demandeId" matInput  formControlName="demandeId" required>
+    </mat-form-field>
+
+    <mat-form-field class="fill">
+        <mat-label>avisManager</mat-label>
+        <input matInput  formControlName="avisManager"  required>
+    </mat-form-field>
+
+    <mat-form-field class="fill">
+        <mat-label>sanctionDemandé</mat-label>
+        <input matInput  formControlName="sanctionDemandé"  required>
+    </mat-form-field>
+
+
+    <mat-radio-group formControlName="valid" aria-label="validé">
+        <mat-radio-button value="true">Validé</mat-radio-button>
+        <!-- <mat-radio-button value="false">Non Validé</mat-radio-button> -->
+    </mat-radio-group>
+    <br>
+    <button mat-raised-button color="primary">Ajouter</button>
+
+  </form>
+</div>

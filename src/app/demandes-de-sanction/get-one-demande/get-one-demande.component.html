@@ -1,0 +1,57 @@
+<div class="center-container">
+  
+  <mat-card>
+    
+    <mat-card-header >
+      <mat-card-title  class="center-element">
+        <span class="span"> ID</span> {{demande.id}}
+      </mat-card-title>
+      <mat-card-title class="center-element">
+        <span class="span">SALARIE ID</span> {{demande.salarie}}
+      </mat-card-title>
+      <mat-card-title class="center-element">
+        <span class="span">USER ID</span> {{demande.user  }}
+      </mat-card-title>
+      <mat-card-title class="center-element">
+        <span class="span">TEAMLEADER VALIDATION</span> {{demande.teamLeaderValidation}}
+      </mat-card-title>
+
+      <mat-card-title class="center-element">
+        <span class="span">SUPERVISEUR VALIDATION</span> {{demande.superviseurValidation}}
+      </mat-card-title>
+      <mat-card-title class="center-element">
+        <span class="span">MANAGER VALIDATION</span> {{demande.managerValidation}}
+      </mat-card-title>
+      <mat-card-title class="center-element">
+        <span class="span">RH VALIDATION</span> {{demande.rhValidation}}
+      </mat-card-title>
+      <mat-card-title class="center-element">
+        <span class="span">RH+ VALIDATION</span> {{demande.rhPlus1Validation}}
+      </mat-card-title>
+      <mat-card-title class="center-element">
+          <span class="span">DEMANDE STATUS</span> {{demande.demandeStatus}}
+        </mat-card-title>
+        <mat-card-title class="center-element">
+          <span class="span">NIVEAU TRAITEMENT</span> {{demande.niveauDeTraitement}}
+        </mat-card-title> 
+        <mat-card-actions class="card-actions">
+          <button (click)="getTeamLeaderRapport()"   mat-button> RAPPORT TEAMLEADER</button>
+          
+          <button (click)="getSuperviseurRapport()"  mat-button> RAPPORT SUPERVISEUR</button>
+          
+          <button (click)="getManagerRapport()"  mat-button> RAPPORT MANAGER</button>
+          
+          <button (click)="getRhRapport()" mat-button> RAPPORT RH</button>
+          
+          <button (click)="getRhPlus1Rapport()"  mat-button> RAPPORT RH+</button>
+        </mat-card-actions>
+    </mat-card-header>  
+
+    <mat-card-content>
+      <mat-card-subtitle *ngIf="hasRapportError" class="error-message">
+        No Rapport Found
+      </mat-card-subtitle>
+    </mat-card-content>
+  </mat-card>
+</div>
+

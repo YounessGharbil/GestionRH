@@ -1,0 +1,32 @@
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: orange;
+}
+
+.file-container {
+  background-color: #eee;
+  padding: 15px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.2s ease;
+}
+
+.file-container:hover {
+  transform: scale(1.1);
+}
+
+#fileInput {
+  display: none;
+}
+
+.file-icon {
+  font-size: 1.2rem;
+}

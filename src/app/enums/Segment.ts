@@ -1,0 +1,6 @@
+export enum Segment{
+    CORPORATE,
+    INDUSTRIAL_SOLUTIONS,
+    TRANSPORTATION_SOLUTIONS
+
+}

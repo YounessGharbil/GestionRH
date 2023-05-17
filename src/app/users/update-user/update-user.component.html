@@ -1,0 +1,35 @@
+<div class="form-container">
+<form  [formGroup]="userFormGroup" (ngSubmit)="onSubmit()">
+    
+
+
+
+    <mat-form-field style="width: 50%;" appearance="fill">
+        <mat-label>Enter your email</mat-label>
+      <!-- <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error> -->
+        <input  matInput placeholder="pat@example.com" formControlName="username" [(ngModel)]="user.email"  required> 
+    </mat-form-field>
+
+    <mat-form-field style="width: 50%;" appearance="fill">
+        <mat-label>Enter your password</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" [(ngModel)]="user.password"  required>
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+    </mat-form-field>
+    <br>
+
+  
+
+    <mat-form-field appearance="fill" required>
+        <mat-label>Role</mat-label>
+        <mat-select formControlName="userRole" [(ngModel)]="user.role" >
+            <mat-option *ngFor="let option of roleOptions" [value]="option.value">{{option.label}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <br>
+    <button mat-raised-button color="primary">Modifer</button>
+  
+  </form>
+
+</div>

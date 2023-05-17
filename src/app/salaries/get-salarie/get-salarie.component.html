@@ -1,0 +1,61 @@
+<div class="center-container">
+  <mat-card>
+    <mat-card-header >
+      <mat-card-title class="center-element">
+        <span class="span">Matricule  </span> {{salarie.matricule}}
+      </mat-card-title>
+      <mat-card-title class="center-element">
+        <span class="span">Nom  </span> {{salarie.nom}}
+      </mat-card-title>
+      <mat-card-title class="center-element">
+        <span class="span">Prénom  </span> {{salarie.prenom}}
+      </mat-card-title>
+
+      <mat-card-title class="center-element">
+        <span class="span">Date d'embauche  </span> {{salarie.date_dembauche}}
+      </mat-card-title>
+      <mat-card-title class="center-element">
+        <span class="span">Type de contrat  </span> {{salarie.type_de_contrat}}
+      </mat-card-title>
+      <mat-card-title class="center-element">
+        <span class="span">Segment  </span> {{salarie.segment}}
+      </mat-card-title>
+      <mat-card-title class="center-element">
+        <span class="span">Business Unit  </span> {{salarie.bu}}
+      </mat-card-title>
+      <mat-card-title class="center-element">
+        <span class="span">Site  </span> {{salarie.site}}
+      </mat-card-title>
+
+      <mat-card-title class="center-element">
+        <span class="span">Code site  </span> {{salarie.code_site}}
+      </mat-card-title>
+      <mat-card-title class="center-element">
+        <span class="span">Département  </span> {{salarie.departement}}
+      </mat-card-title>
+      <mat-card-title class="center-element">
+        <span class="span">Local Job Title  </span> {{salarie.local_job_title}}
+      </mat-card-title>
+      <mat-card-title class="center-element">
+        <span class="span">Position </span>  {{salarie.position}}
+      </mat-card-title>
+
+      <mat-card-title class="center-element">
+        <span class="span">Superviseur  </span> {{salarie.supervisor}}
+      </mat-card-title>
+      <mat-card-title class="center-element">
+        <span class="span">Genre  </span> {{salarie.genre}}
+      </mat-card-title>
+      
+      <mat-card-title class="center-element">
+        <span class="span">Statut  </span> {{salarie.status}}
+      </mat-card-title>
+
+    </mat-card-header>  
+    <mat-card-actions>
+      <button (click)="updateSalarie()" style="background-color: orange;font: 1em sans-serif;"  mat-button>MODIFIER</button>
+    
+      <!-- <button (click)="deleteSalarie()" style="background-color: red;font: 1em sans-serif;" mat-button>SUPPRIMER</button> -->
+    </mat-card-actions>
+  </mat-card>
+</div>

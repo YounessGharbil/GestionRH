@@ -1,0 +1,38 @@
+<div class="form-container ">
+<form  [formGroup]="rapportTeamLeaderFormGroup" (ngSubmit)="onSubmit()">
+    
+    <mat-form-field class="fill">
+        <mat-label>Matricule de SAlarié</mat-label>
+        <input matInput  formControlName="salariéMatricule" required>
+    </mat-form-field>
+
+    <mat-form-field class="fill">
+        <mat-label>La faute comise</mat-label>
+        <input matInput  formControlName="laFaute"  required>
+    </mat-form-field>
+
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label> date</mat-label>
+        <input formControlName="dateCommis" matInput [matDatepicker]="picker">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matIconSuffix [for]="picker">
+          <mat-icon matDatepickerToggleIcon>keyboard_arrow_down</mat-icon>
+        </mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+    <mat-form-field class="fill">
+        <mat-label>temoin</mat-label>
+        <input matInput  formControlName="temoin"  required>
+    </mat-form-field>
+
+    <mat-radio-group formControlName="valid" aria-label="validé">
+        <mat-radio-button value="true">Validé</mat-radio-button>
+        <!-- <mat-radio-button value="false">Non Validé</mat-radio-button> -->
+    </mat-radio-group>
+    <br>
+    <button mat-raised-button color="primary">Ajouter</button>
+   
+  </form>
+</div>

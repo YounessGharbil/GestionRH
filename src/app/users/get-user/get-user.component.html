@@ -1,0 +1,28 @@
+<div class="center-container">
+  <mat-card class="user-card">
+    <mat-card-header>
+      <mat-card-title class="center-element">
+        <span class="span">Matricule  </span> {{user.matricule}}
+      </mat-card-title>
+      <mat-card-title class="center-element">
+        <span class="span">Email  </span>{{user.email}}
+      </mat-card-title>
+
+      <mat-card-title class="center-element">
+        <span class="span">Site  </span> {{user.site}}
+      </mat-card-title>
+
+      <mat-card-title class="center-element">
+        <span class="span">Departement  </span> {{user.department}}
+      </mat-card-title>
+
+      <mat-card-title class="center-element">
+        <span class="span">Role  </span> {{user.role}}
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-actions >
+      <button (click)="updateUser()" class="user-card-button" mat-raised-button color="primary">MODIFIER</button>
+      <button (click)="deleteUser()" class="user-card-button" mat-raised-button color="warn">SUPPRIMER</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

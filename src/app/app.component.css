@@ -1,0 +1,88 @@
+/* Apply a gradient background to the toolbar */
+mat-toolbar {
+  background: linear-gradient(to right, #FFA500, #FF4500);
+  color: white;
+}
+
+/* Increase the size of the logo */
+.logo img {
+  max-height: 64px;
+}
+
+/* Add a hover effect to the buttons */
+button.mat-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Style the sidenav */
+.sidenav-wrapper {
+  position: absolute;
+  top: 60px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #eee;
+}
+
+mat-sidenav {
+  width: 250px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+mat-sidenav-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  max-width: 100%;
+  height: 100%;
+}
+
+/* Add a background color and padding to the menu items */
+mat-sidenav a {
+  display: block;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+/* Apply hover and active styles to the menu items */
+mat-sidenav a:hover {
+  background-color: #F5F5F5;
+}
+
+mat-sidenav a.active {
+  background-color: #E0E0E0;
+  color: #FFA500;
+  font-weight: bold;
+}
+
+.extra {
+  flex: 1 1 auto;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  mat-sidenav {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  /* Remove the padding from the menu items */
+  mat-sidenav a {
+    padding: 0;
+  }
+
+  /* Center the menu items vertically */
+  mat-sidenav a span {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 10px;
+  }
+  
+}

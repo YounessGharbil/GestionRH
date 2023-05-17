@@ -1,0 +1,98 @@
+/* .demo-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    color: orange;
+  }
+  table {
+    width: 100%;
+    
+  }
+  th{
+    color: orange;
+
+  }
+  td{
+    color: purple;
+  }
+  
+   */
+ 
+  /* Button Container */
+  .search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px; /* Adjust the margin as per your preference */
+  }
+  
+  .button-container {
+    display: flex;
+    gap: 10px; /* Adjust the gap as per your preference */
+  }
+  .demo-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+  }
+
+  /* Table Styles */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #f2f2f2;
+    color: #555555;
+    font-weight: bold;
+  }
+
+  td {
+    background-color: #ffffff;
+    color: #333333;
+  }
+
+  /* Button Styles */
+  .demo-button {
+    background-color: #ff8800;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .demo-button:hover {
+    background-color: #ffaa33;
+  }
+
+  /* Table Header Cell Styles */
+  .mat-header-cell {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+
+  /* Table Row Styles */
+  .mat-row {
+    transition: background-color 0.3s ease;
+  }
+
+  .mat-row:hover {
+    background-color: #f5f5f5;
+  }
+
+  /* Search Input Styles */
+  .mat-form-field {
+    width: 100%;
+  }

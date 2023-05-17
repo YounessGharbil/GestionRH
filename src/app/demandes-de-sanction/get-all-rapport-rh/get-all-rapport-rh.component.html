@@ -1,0 +1,75 @@
+
+
+<div class="search-bar">
+  
+  <mat-form-field appearance="fill">
+    <mat-label>Search</mat-label>
+    <input  matInput (keyup)="filter($event)">
+  </mat-form-field>
+    
+    <div class="button-container">
+      <button *ngIf="isRhAuthenticated" color="orange" mat-raised-button (click)="addRapport()" class="demo-button">
+        AJOUTER RAPPORT
+      </button>
+    </div>
+  </div>
+  
+  
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table" matSort>
+  
+    <ng-container matColumnDef="demande_de_sanction_id">
+      <th mat-header-cell *matHeaderCellDef>DEMANDE DE SANCTION ID</th>
+      <td mat-cell *matCellDef="let element">{{element.demande_de_sanction_id}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="user_matricule">
+        <th mat-header-cell *matHeaderCellDef>USER MATRICULE</th>
+        <td mat-cell *matCellDef="let element">{{element.user_matricule}}</td>
+      </ng-container>
+    
+
+      <ng-container matColumnDef="date_embauche">
+        <th mat-header-cell *matHeaderCellDef>DATE EMBAUCHE</th>
+        <td mat-cell *matCellDef="let element">{{element.date_embauche}}</td>
+      </ng-container>
+    
+      <ng-container matColumnDef="age">
+        <th mat-header-cell *matHeaderCellDef>AGE</th>
+        <td mat-cell *matCellDef="let element">{{element.age}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="nbr_enfants">
+        <th mat-header-cell *matHeaderCellDef>NBR ENFANTS</th>
+        <td mat-cell *matCellDef="let element">{{element.nbr_enfants}}</td>
+      </ng-container>
+      
+     
+          <ng-container matColumnDef="date">
+            <th mat-header-cell *matHeaderCellDef>DATE</th>
+            <td mat-cell *matCellDef="let element">{{element.date}}</td>
+          </ng-container>
+      
+          <ng-container matColumnDef="_validated">
+              <th mat-header-cell *matHeaderCellDef>VALIDATION</th>
+              <td mat-cell *matCellDef="let element">{{element._validated}}</td>
+            </ng-container>
+          
+  
+  
+    <ng-container matColumnDef="afficher">
+      <th mat-header-cell *matHeaderCellDef>AFFICHER</th>
+      <td mat-cell *matCellDef="let element">
+          <button mat-icon-button color="primary" (click)="showDetails(element)">
+            <mat-icon>remove_red_eye</mat-icon>
+          </button>
+      </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumnsTeamLeader"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumnsTeamLeader;"></tr>
+  
+  </table>
+  
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of salaries"></mat-paginator>
+  
+  

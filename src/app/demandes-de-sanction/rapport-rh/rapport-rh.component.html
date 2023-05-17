@@ -1,0 +1,28 @@
+
+<div class="form-container ">
+<form  [formGroup]="rapporRhFormGroup" (ngSubmit)="onSubmit()">
+    
+    <mat-form-field class="fill">
+        <mat-label>demandeId</mat-label>
+        <input [(ngModel)]="demandeId" matInput  formControlName="demandeId" required>
+    </mat-form-field>
+
+    <mat-form-field class="fill">
+        <mat-label>age</mat-label>
+        <input matInput  formControlName="age"  required>
+    </mat-form-field>
+
+    <mat-form-field class="fill">
+        <mat-label>nbrEnfants</mat-label>
+        <input matInput  formControlName="nbrEnfants"  required>
+    </mat-form-field>
+
+    <mat-radio-group formControlName="valid" aria-label="validé">
+        <mat-radio-button value="true">Validé</mat-radio-button>
+        <!-- <mat-radio-button value="false">Non Validé</mat-radio-button> -->
+    </mat-radio-group>
+    <br>
+    <button mat-raised-button color="primary">Ajouter</button>
+  
+  </form>
+</div>
